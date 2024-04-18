@@ -1,8 +1,8 @@
 # Visualization
-Welcome to the Dictionary of George Eliot's People and Places!
-Developed by Nathan Bradshaw, Ben Buckley, Spencer Dunn, and Will Tobens
+Welcome to the Dictionary of George Eliot's People and Places,
+developed by Nathan Bradshaw, Ben Buckley, Spencer Dunn, and Will Tobens
 --------------------------------------------------------------------------
-This project was created for COMP 4710: Senior design by the Visualization
+This project was created for COMP 4710: Senior Design by the Visualization
 Blue Team: Group 3. This is a comprehensive guide to use and interact with
 the dictionary. The guide is split into developer and user info.
 --------------------------------------------------------------------------
@@ -40,7 +40,7 @@ WorkItems.js - generates the expanded boxes for each work
 -----------------------------------------------------------------------------
 # FOR USERS
 -----------
-Upon loading the dictionary, you will be greeted with all of George Eliot's works, each with an
+Upon loading the dictionary, you will be greeted with all of George Eliot's works of fiction, each with a summary of the narrative and an
 expandable box containing places, characters, and other named entities. You can expand each of
 these categories and click on each item to see its information. Additionally, you can search for
 a specific entity in the search bar in the top right.
