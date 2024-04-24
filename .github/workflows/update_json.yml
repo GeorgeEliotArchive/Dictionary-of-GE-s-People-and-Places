@@ -1,34 +1,68 @@
-name: Update JSON Files
+name: Update JSON Files and Deploy
 
 on:
   schedule:
-    - cron: '0 */2 * * *' #Runs every two hours
+    - cron: '0 */12 * * *' # Runs every twelve hours
   workflow_dispatch:
 
 jobs:
-  update-json:
+  update-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.10' 
+        python-version: '3.10'
 
     - name: Install Dependencies
       run: |
-        pip install requests 
+        pip install requests
 
     - name: Run Script
-      run: python src/Backend_Services/api_test.py 
+      run: python src/Backend_Services/api_test.py
+
+    - name: Check for Changes
+      id: git-check
+      run: |
+        git diff
+        if [ -z "$(git status --porcelain)" ]; then
+          echo "No changes to commit"
+          echo "::set-output name=changes_exist::false"
+        else
+          echo "Changes detected"
+          echo "::set-output name=changes_exist::true"
+        fi
 
     - name: Commit and Push Changes
+      if: steps.git-check.outputs.changes_exist == 'true'
       run: |
         git config --global user.name 'Spencer Dunn'
         git config --global user.email 'sfd0014@auburn.edu'
-        git add . 
+        git add .
         git commit -m "Update JSON data"
         git push
+
+    - name: Setup Node
+      if: steps.git-check.outputs.changes_exist == 'true'
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x' 
+        
+    - name: Install Node Dependencies
+      if: steps.git-check.outputs.changes_exist == 'true'
+      run: npm ci
+
+    - name: Build Project
+      if: steps.git-check.outputs.changes_exist == 'true'
+      run: CI=false npm run build
+
+    - name: Deploy
+      if: steps.git-check.outputs.changes_exist == 'true'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build 
