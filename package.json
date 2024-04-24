@@ -1,5 +1,5 @@
 {
-  "homepage": "https://GeorgeEliotArchive.github.io/Visualization",
+  "homepage": "https://georgeeliotarchive.github.io/Dictionary-of-GE-s-People-and-Places/",
   "name": "encyclopedia-app",
   "version": "0.1.0",
   "private": true,
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
