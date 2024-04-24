@@ -42,3 +42,7 @@ Upon loading the dictionary, you will be greeted with all of George Eliot's work
 expandable box containing places, characters, and other named entities. You can expand each of
 these categories and click on each item to see its information. Additionally, you can search for
 a specific entity in the search bar in the top right.
+------------------------------------------------------------------------------
+# For Editors
+Any data changed on Omeka will be reflected on the page within 12 hours, but those who have access to
+the repository can run the deployment manually by going into Actions > Update JSON and Deploy > Run manually
