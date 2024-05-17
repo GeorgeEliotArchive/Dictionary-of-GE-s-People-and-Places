@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Dictionary-of-GE-s-People-and-Places/static/css/main.17337596.css",
-    "main.js": "/Dictionary-of-GE-s-People-and-Places/static/js/main.15641aef.js",
+    "main.js": "/Dictionary-of-GE-s-People-and-Places/static/js/main.5423b6e0.js",
     "static/media/georgeeliot.jpg": "/Dictionary-of-GE-s-People-and-Places/static/media/georgeeliot.0ebd6ec9f9e526f54c12.jpg",
     "static/media/romola.jpg": "/Dictionary-of-GE-s-People-and-Places/static/media/romola.4fc04e2758d7b51b8350.jpg",
     "static/media/themill.jpg": "/Dictionary-of-GE-s-People-and-Places/static/media/themill.a99cd76947523418b5a8.jpg",
@@ -20,10 +20,10 @@
     "static/media/brotherjacob.jpg": "/Dictionary-of-GE-s-People-and-Places/static/media/brotherjacob.bd37b6ccb5a5045840d6.jpg",
     "index.html": "/Dictionary-of-GE-s-People-and-Places/index.html",
     "main.17337596.css.map": "/Dictionary-of-GE-s-People-and-Places/static/css/main.17337596.css.map",
-    "main.15641aef.js.map": "/Dictionary-of-GE-s-People-and-Places/static/js/main.15641aef.js.map"
+    "main.5423b6e0.js.map": "/Dictionary-of-GE-s-People-and-Places/static/js/main.5423b6e0.js.map"
   },
   "entrypoints": [
     "static/css/main.17337596.css",
-    "static/js/main.15641aef.js"
+    "static/js/main.5423b6e0.js"
   ]
 }
