@@ -50,7 +50,7 @@ jobs:
       if: steps.git-check.outputs.changes_exist == 'true'
       uses: actions/setup-node@v3
       with:
-        node-version: '18.x' 
+        node-version: '20.x' 
         
     - name: Install Node Dependencies
       if: steps.git-check.outputs.changes_exist == 'true'
